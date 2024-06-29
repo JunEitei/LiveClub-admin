@@ -72,7 +72,7 @@ export const constantRoutes = [
         path: '/club/dept',
         component: () => import('@/views/system/dept'),
         name: 'Dept',
-        meta: { title: '部门管理', icon: 'dashboard', affix: true }
+        meta: { title: '場地管理', icon: 'dashboard', affix: true }
       }
     ]
   },
