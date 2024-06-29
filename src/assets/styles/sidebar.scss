@@ -1,9 +1,13 @@
+$base-sidebar-width: 240px;
+$sidebar-width: $base-sidebar-width * 0.77; // 计算降低30%后的宽度
+
+
 #app {
 
   .main-container {
     height: 100%;
     transition: margin-left .28s;
-    margin-left: $base-sidebar-width;
+    margin-left: $sidebar-width;
     position: relative;
   }
 
@@ -14,7 +18,7 @@
   .sidebar-container {
     -webkit-transition: width .28s;
     transition: width 0.28s;
-    width: $base-sidebar-width !important;
+    width: $sidebar-width !important;
     background-color: $base-menu-background;
     height: 100%;
     position: fixed;
@@ -96,7 +100,7 @@
 
     & .nest-menu .el-sub-menu>.el-sub-menu__title,
     & .el-sub-menu .el-menu-item {
-      min-width: $base-sidebar-width !important;
+      min-width: $sidebar-width !important;
       transition: background-color 0.05s, color 0.05s;
       &:hover,
       &.is-active {
@@ -132,10 +136,6 @@
 
       .el-tooltip {
         padding: 0 !important;
-
-        .svg-icon {
-          margin-left: 20px;
-        }
       }
     }
 
@@ -144,10 +144,6 @@
 
       &>.el-sub-menu__title {
         padding: 0 !important;
-
-        .svg-icon {
-          margin-left: 20px;
-        }
       }
     }
 
@@ -174,7 +170,7 @@
   }
 
   .el-menu--collapse .el-menu .el-sub-menu {
-    min-width: $base-sidebar-width !important;
+    min-width: $sidebar-width !important;
   }
 
   // mobile responsive
@@ -185,14 +181,14 @@
 
     .sidebar-container {
       transition: transform .28s;
-      width: $base-sidebar-width !important;
+      width: $sidebar-width !important;
     }
 
     &.hideSidebar {
       .sidebar-container {
         pointer-events: none;
         transition-duration: 0.3s;
-        transform: translate3d(-$base-sidebar-width, 0, 0);
+        transform: translate3d(-$sidebar-width, 0, 0);
       }
     }
   }
