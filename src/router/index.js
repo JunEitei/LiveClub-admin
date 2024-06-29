@@ -58,15 +58,21 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/index',
+    redirect: '/club/dept', // 新增重定向路由
+    hidden: true
+  },
+  {
     path: '',
     component: Layout,
-    redirect: '/index',
+    redirect: '/club/dept', // 修改重定向路径为 /club/dept
+    hidden: true, // 隐藏首页
     children: [
       {
-        path: '/index',
-        component: () => import('@/views/index'),
-        name: 'Index',
-        meta: { title: '營業數據', icon: 'dashboard', affix: true }
+        path: '/club/dept',
+        component: () => import('@/views/system/dept'),
+        name: 'Dept',
+        meta: { title: '部门管理', icon: 'dashboard', affix: true }
       }
     ]
   },
