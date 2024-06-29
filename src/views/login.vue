@@ -157,29 +157,36 @@ getCookie();
 </script>
 
 <style lang='scss' scoped>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500&display=swap');
+
 .login {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: #f0f0f0; /* 设置背景颜色为灰色 */
-  overflow: hidden; /* 隐藏超出部分 */
+  background: linear-gradient(135deg, #ff9a9e 50%, #fad0c4 100%);
+  overflow: hidden;
 }
+
 
 .title {
   margin: 0 auto 30px auto;
   text-align: center;
-  color: #707070;
+  color: #ffffff;
+  font-family: 'Lobster', cursive;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .login-form {
   position: relative;
-  z-index: 1; /* 确保表单在顶层 */
+  z-index: 1;
   border-radius: 6px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
   width: 400px;
   padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   .el-input {
     height: 40px;
     input {
@@ -200,12 +207,12 @@ getCookie();
   transform: translateX(-50%);
   width: 100%;
   text-align: center;
-  color: #ccc;
-  font-family: Arial;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
 }
 
-/* 静态条纹背景效果 */
+/* 靜態條紋背景效果 */
 .login::before {
   content: "";
   position: absolute;
@@ -215,11 +222,11 @@ getCookie();
   height: 100%;
   background: repeating-linear-gradient(
     -45deg,
-    #eeeeee,
-    #eeeeee 10px,
-    #ffffff 10px,
-    #ffffff 20px
-  ); /* 使用条纹背景 */
-  z-index: -1; /* 将条纹背景置于最底层 */
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1) 10px,
+    rgba(0, 0, 0, 0.1) 10px,
+    rgba(0, 0, 0, 0.1) 20px
+  );
+  z-index: -1;
 }
 </style>
