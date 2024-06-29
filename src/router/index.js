@@ -59,17 +59,17 @@ export const constantRoutes = [
   },
   {
     path: '/index',
-    redirect: '/club/dept', // 新增重定向路由
+    redirect: '/club/livehouse', // 新增重定向路由
     hidden: true
   },
   {
     path: '',
     component: Layout,
-    redirect: '/club/dept', // 修改重定向路径为 /club/dept
+    redirect: '/club/livehouse', // 修改重定向路径为 /club/dept
     hidden: true, // 隐藏首页
     children: [
       {
-        path: '/club/dept',
+        path: '/club/livehouse',
         component: () => import('@/views/system/dept'),
         name: 'Dept',
         meta: { title: '場地管理', icon: 'dashboard', affix: true }

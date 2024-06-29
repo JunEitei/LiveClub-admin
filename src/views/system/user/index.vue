@@ -6,7 +6,7 @@
             <div class="head-container">
                <el-input
                   v-model="deptName"
-                  placeholder="请输入場地名称"
+                  placeholder="会場名を入力してください"
                   clearable
                   prefix-icon="Search"
                   style="margin-bottom: 20px"
