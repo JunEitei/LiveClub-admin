@@ -1,0 +1,10 @@
+{
+  "root": true, // 表示这是根配置文件，停止在父级目录中查找配置文件
+  "extends": [
+    "eslint:recommended", // 使用 ESLint 推荐的规则
+    "plugin:vue/recommended" // 使用 Vue.js 推荐的规则
+  ],
+  "plugins": [
+    "vue" // 使用 Vue.js 插件
+  ]
+}
