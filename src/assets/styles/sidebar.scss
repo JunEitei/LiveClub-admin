@@ -1,5 +1,5 @@
 $base-sidebar-width: 240px;
-$sidebar-width: $base-sidebar-width * 0.75; // 计算宽度
+$sidebar-width: $base-sidebar-width * 0.68; // 计算宽度
 
 #app {
   .main-container {
@@ -63,7 +63,8 @@ $sidebar-width: $base-sidebar-width * 0.75; // 计算宽度
       overflow: hidden;
     }
     .svg-icon {
-      margin-right: 12px; // 调整图标右侧边距
+      margin-left: -6px; // 调整图标左侧边距
+      margin-right: 11px; // 调整图标右侧边距
       font-size: 14.5px; // 将图标大小增加两码
     }
 
@@ -103,11 +104,15 @@ $sidebar-width: $base-sidebar-width * 0.75; // 计算宽度
     & .el-sub-menu .el-menu-item {
       min-width: $sidebar-width !important;
       transition: background-color 0.05s, color 0.05s;
-      &:hover,
-      &.is-active {
+      &:hover {
         background-color: black !important;
         color: white !important;
       }
+    }
+    
+    // 确保父级菜单文字在子菜单选中时保持原色
+    & .el-sub-menu.is-active > .el-sub-menu__title {
+      color: $base-menu-color !important;
     }
 
     & .theme-dark .nest-menu .el-sub-menu>.el-sub-menu__title,
@@ -147,7 +152,13 @@ $sidebar-width: $base-sidebar-width * 0.75; // 计算宽度
         padding: 0 !important;
       }
     }
-
+    .el-sub-menu__title {
+      .svg-icon {
+        margin-left: auto; // 图标左侧自动对齐
+        margin-right: auto; // 图标右侧自动对齐
+        display: block; // 确保图标占据整行宽度
+      }
+    }
     .el-menu--collapse {
       .el-sub-menu {
         &>.el-sub-menu__title {

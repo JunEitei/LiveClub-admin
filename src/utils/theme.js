@@ -7,7 +7,7 @@ export function handleThemeStyle(theme) {
 	for (let i = 1; i <= 9; i++) {
 		document.documentElement.style.setProperty(`--el-color-primary-dark-${i}`, `${getDarkColor(theme, i / 10)}`)
 	}
-}
+}	
 
 // hex颜色转rgb颜色
 export function hexToRgb(str) {

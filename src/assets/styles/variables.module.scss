@@ -9,32 +9,21 @@ $yellow: #FEC171;
 $panGreen: #30B08F;
 
 // 默认菜单主题风格
-$base-menu-color: #bfcbd9;
+$base-menu-color: #000000;
 $base-menu-color-active: #f4f4f5;
-$base-menu-background: #304156;
+$base-menu-background: #f4f4f5;
 $base-logo-title-color: #ffffff;
 
-$base-menu-light-color: rgba(0, 0, 0, 0.7);
+$base-menu-light-color: rgba(0, 0, 0, 1);
 $base-menu-light-background: #ffffff;
-$base-logo-light-title-color: #001529;
+$base-logo-light-title-color: #000000;
 
-$base-sub-menu-background: #1f2d3d;
-$base-sub-menu-hover: #001528;
+$base-sub-menu-background: #f4f4f5;
+$base-sub-menu-hover: #000000;
 
-// 自定义暗色菜单风格
-/**
-$base-menu-color:hsla(0,0%,100%,.65);
-$base-menu-color-active:#fff;
-$base-menu-background:#001529;
-$base-logo-title-color: #ffffff;
+$base-sidebar-width: 240px;
+$sidebar-width: $base-sidebar-width * 0.75; // 计算宽度
 
-$base-menu-light-color:rgba(0,0,0,.70);
-$base-menu-light-background:#ffffff;
-$base-logo-light-title-color: #001529;
-
-$base-sub-menu-background:#000c17;
-$base-sub-menu-hover:#001528;
-*/
 
 $--color-primary: #409EFF;
 $--color-success: #67C23A;
