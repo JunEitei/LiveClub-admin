@@ -1,5 +1,5 @@
-$base-sidebar-width: 233px;
-$sidebar-width: $base-sidebar-width * 0.68; // 计算宽度
+$base-sidebar-width: 232px;
+$sidebar-width: $base-sidebar-width * 0.69; // 计算宽度
 
 #app {
   .main-container {
@@ -63,9 +63,9 @@ $sidebar-width: $base-sidebar-width * 0.68; // 计算宽度
       overflow: hidden;
     }
     .svg-icon {
-      margin-left: -6px; // 调整图标左侧边距
+      margin-left: -8px; // 调整图标左侧边距
       margin-right: 11px; // 调整图标右侧边距
-      font-size: 14.5px; // 将图标大小增加两码
+      font-size: 14px; // 将图标大小增加两码
     }
 
     .el-menu {
@@ -113,6 +113,7 @@ $sidebar-width: $base-sidebar-width * 0.68; // 计算宽度
     // 确保父级菜单文字在子菜单选中时保持原色
     & .el-sub-menu.is-active > .el-sub-menu__title {
       color: $base-menu-color !important;
+
     }
 
     & .theme-dark .nest-menu .el-sub-menu>.el-sub-menu__title,
@@ -124,6 +125,16 @@ $sidebar-width: $base-sidebar-width * 0.68; // 计算宽度
         background-color: black !important;
         color: white !important;
       }
+    }
+  }
+  .el-sub-menu__title {
+    .svg-icon {
+      margin-left: -2px;
+      font-size: 15px; // 调整图标大小，可以根据需要适当调整
+    }
+    .menu-title {
+      font-weight: bold;
+      font-size: 14px; // 调整图标大小，可以根据需要适当调整
     }
   }
 
