@@ -1,9 +1,7 @@
 $base-sidebar-width: 240px;
-$sidebar-width: $base-sidebar-width * 0.77; // 计算降低30%后的宽度
-
+$sidebar-width: $base-sidebar-width * 0.75; // 计算宽度
 
 #app {
-
   .main-container {
     height: 100%;
     transition: margin-left .28s;
@@ -28,8 +26,9 @@ $sidebar-width: $base-sidebar-width * 0.77; // 计算降低30%后的宽度
     left: 0;
     z-index: 1001;
     overflow: hidden;
-    -webkit-box-shadow: 2px 0 6px rgba(0,21,41,.35);
-    box-shadow: 2px 0 6px rgba(0,21,41,.35);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // 更柔和的阴影
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // 更柔和的阴影
+
 
     // reset element-ui css
     .horizontal-collapse-transition {
@@ -63,9 +62,9 @@ $sidebar-width: $base-sidebar-width * 0.77; // 计算降低30%后的宽度
       width: 100%;
       overflow: hidden;
     }
-
     .svg-icon {
-      margin-right: 16px;
+      margin-right: 12px; // 调整图标右侧边距
+      font-size: 14.5px; // 将图标大小增加两码
     }
 
     .el-menu {
@@ -79,6 +78,8 @@ $sidebar-width: $base-sidebar-width * 0.77; // 计算降低30%后的宽度
       text-overflow: ellipsis !important;
       white-space: nowrap !important;
       transition: background-color 0.05s, color 0.05s;
+      font-size: 14px; // 调整字体大小
+      font-weight: normal; // 加粗字体
     }
 
     .el-menu-item .el-menu-tooltip__trigger {
@@ -207,6 +208,7 @@ $sidebar-width: $base-sidebar-width * 0.77; // 计算降低30%后的宽度
   &>.el-menu {
     .svg-icon {
       margin-right: 16px;
+      font-size: 14px; // 调整图标的大小
     }
   }
 
