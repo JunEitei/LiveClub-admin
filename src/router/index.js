@@ -72,7 +72,7 @@ export const constantRoutes = [
         path: '/club/livehouse',
         component: () => import('@/views/system/dept'),
         name: 'Dept',
-        meta: { title: '場地管理', icon: 'dashboard', affix: true }
+        meta: { title: '会場管理', icon: 'dashboard', affix: true }
       }
     ]
   },
