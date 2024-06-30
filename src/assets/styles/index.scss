@@ -112,11 +112,11 @@ aside {
   -moz-osx-font-smoothing: grayscale;
 
   a {
-    color: #337ab7;
+    color: #ff4294;
     cursor: pointer;
 
     &:hover {
-      color: rgb(32, 160, 255);
+      color: rgb(138, 12, 54);
     }
   }
 }
@@ -165,11 +165,11 @@ aside {
 
 .link-type,
 .link-type:focus {
-  color: #337ab7;
+  color: #ff4294;
   cursor: pointer;
 
   &:hover {
-    color: rgb(32, 160, 255);
+    color: rgb(138, 12, 54);
   }
 }
 

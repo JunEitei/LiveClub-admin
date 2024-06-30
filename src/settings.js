@@ -10,7 +10,7 @@ export default {
   /**
    * 是否系统布局配置
    */
-  showSettings: true,
+  showSettings: false,
 
   /**
    * 是否显示顶部导航
@@ -20,7 +20,7 @@ export default {
   /**
    * 是否显示 tagsView
    */
-  tagsView: true,
+  tagsView: false,
 
   /**
    * 是否固定头部
@@ -30,7 +30,7 @@ export default {
   /**
    * 是否显示logo
    */
-  sidebarLogo: true,
+  sidebarLogo: false,
 
   /**
    * 是否显示动态标题

@@ -7,21 +7,9 @@
       <!-- 右侧其他菜单项 -->
     </div>
 
-    <div class="avatar-container">
-      <el-dropdown @command="handleCommand" class="right-menu-item hover-effect" trigger="click">
-        <img :src="userStore.avatar" class="user-avatar" />
-        <template #dropdown>
-          <el-dropdown-menu>
-            <router-link to="/user/profile">
-              <el-dropdown-item>个人中心</el-dropdown-item>
-            </router-link>
-            <el-dropdown-item divided command="logout">
-              <span>退出登录</span>
-            </el-dropdown-item>
-          </el-dropdown-menu>
-        </template>
-      </el-dropdown>
-    </div>
+    <router-link to="/user/profile" class="avatar-container">
+      <img :src="userStore.avatar" class="user-avatar" />
+    </router-link>
   </div>
 </template>
 
@@ -77,7 +65,7 @@ function setLayout() {
   height: 50px;
   overflow: hidden;
   position: relative;
-  background-color: #f0f0f0; /* 设置背景颜色为淺灰色 */
+  background-color: #f5f5f5; /* 设置背景颜色为浅灰色 */
   color: #333; /* 设置文字颜色为深灰色 */
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
   display: flex;

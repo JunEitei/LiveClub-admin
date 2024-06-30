@@ -26,7 +26,7 @@
                         <div class="pull-right">{{ state.user.email }}</div>
                      </li>
                      <li class="list-group-item">
-                        <svg-icon icon-class="tree" />所属場地
+                        <svg-icon icon-class="tree" />所属场地
                         <div class="pull-right" v-if="state.user.dept">{{ state.user.dept.deptName }} / {{ state.postGroup }}</div>
                      </li>
                      <li class="list-group-item">
@@ -36,6 +36,9 @@
                      <li class="list-group-item">
                         <svg-icon icon-class="date" />创建日期
                         <div class="pull-right">{{ state.user.createTime }}</div>
+                     </li>
+                     <li class="list-group-item">
+                        <el-button type="danger" @click="handleLogout">退出登录</el-button>
                      </li>
                   </ul>
                </div>
@@ -62,11 +65,15 @@
    </div>
 </template>
 
-<script setup name="Profile">
+<script setup>
 import userAvatar from "./userAvatar";
 import userInfo from "./userInfo";
 import resetPwd from "./resetPwd";
 import { getUserProfile } from "@/api/system/user";
+import { ElMessageBox } from 'element-plus';
+import useUserStore from '@/store/modules/user'; // 导入 userStore
+
+const userStore = useUserStore(); // 使用 useUserStore() 获取 userStore 实例
 
 const activeTab = ref("userinfo");
 const state = reactive({
@@ -82,6 +89,18 @@ function getUser() {
     state.postGroup = response.postGroup;
   });
 };
+
+function handleLogout() {
+  ElMessageBox.confirm('确定注销并退出系统吗？', '提示', {
+    confirmButtonText: '确定',
+    cancelButtonText: '取消',
+    type: 'warning'
+  }).then(() => {
+    userStore.logOut().then(() => {
+      location.href = '/index';
+    });
+  }).catch(() => { });
+}
 
 getUser();
 </script>

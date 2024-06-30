@@ -1,4 +1,4 @@
-$base-sidebar-width: 240px;
+$base-sidebar-width: 233px;
 $sidebar-width: $base-sidebar-width * 0.68; // 计算宽度
 
 #app {
@@ -26,8 +26,8 @@ $sidebar-width: $base-sidebar-width * 0.68; // 计算宽度
     left: 0;
     z-index: 1001;
     overflow: hidden;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // 更柔和的阴影
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // 更柔和的阴影
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); // 更柔和的阴影
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); // 更柔和的阴影
 
 
     // reset element-ui css
